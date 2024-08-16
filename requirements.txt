@@ -1,0 +1,6 @@
+transformers 
+streamlit
+PyPDF2
+txtai
+pipeline
+gtts
