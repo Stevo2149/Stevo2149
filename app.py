@@ -52,14 +52,14 @@ if choice == "Summarize Text":
     input_text = st.text_area("Enter your text here")
     if input_text:
         if st.button("Summarize Text"):
-            col1, col2, col3 = st.columns([1, 1, 1])
+            col1, col2, col3 = st.columns([1, 1, 1]) #Set up column format for the results of the summarization process
             with col1:
                 st.markdown("**Your Input Text**")
-                st.markdown(f'<div style="color: lightgray;">{input_text}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div style="color: lightgray;">{input_text}</div>', unsafe_allow_html=True) #Text color selection
             with col2:
                 st.markdown("**Summary Result**")
                 result = summary_text(input_text)
-                st.markdown(f'<div style="color: lightgreen;">{result}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div style="color: lightgreen;">{result}</div>', unsafe_allow_html=True) #Text color selection
             with col3:
                 st.markdown("**Text-to-Speech**")
                 # Convert summarized text to speech and save as an audio file
@@ -84,11 +84,11 @@ elif choice == "Summarize Document":
             with col1:
                 st.markdown("**Extracted Text from Document**")
                 extracted_text = extract_text_from_pdf("doc_file.pdf")
-                st.markdown(f'<div style="color: lightgray;">{extracted_text}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div style="color: lightgray;">{extracted_text}</div>', unsafe_allow_html=True) #Text color selection
             with col2:
                 st.markdown("**Summary Document**")
                 summary_result = summary_text(extracted_text)
-                st.markdown(f'<div style="color: lightgreen;">{summary_result}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div style="color: lightgreen;">{summary_result}</div>', unsafe_allow_html=True) #Text color selection
             with col3:
                 st.markdown("**Text-to-Speech**")
                 # Convert summarized text to speech and save as an audio file
